@@ -69,4 +69,14 @@ document.addEventListener('DOMContentLoaded', function() {
   heroSection.addEventListener('mouseleave', () => {
     slideTimer = setInterval(nextSlide, slideInterval);
   });
+
+  const hamburger = document.querySelector('.navbar-hamburger');
+  const navLinks = document.querySelector('.navbar-links');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+      navLinks.classList.toggle('open');
+      const expanded = navLinks.classList.contains('open');
+      hamburger.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+  }
 });
