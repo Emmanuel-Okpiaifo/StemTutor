@@ -221,8 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.addEventListener('resize', updateSlideshow);
-    document.addEventListener('DOMContentLoaded', function() {
-      updateSlideshow();
-    });
+    // Initialize slideshow immediately
+    updateSlideshow();
   })();
 });
