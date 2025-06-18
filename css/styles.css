@@ -1578,29 +1578,193 @@ html, body {
   .virtual-info-section {
     padding: 24px 0 0 0;
   }
+  .virtual-info-container {
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 10px;
+    align-items: stretch;
+  }
   .virtual-info-image img {
-    width: 98vw;
-    max-width: 98vw;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 12px auto;
+    display: block;
   }
-  .virtual-info-title {
-    font-size: 1.1rem;
+  .virtual-info-text {
+    max-width: 100%;
+    min-width: 0;
+    text-align: left;
+    padding: 0;
   }
-  .virtual-info-desc {
-    font-size: 0.98rem;
+
+  /* Virtual Gain Section */
+  .virtual-gain-section {
+    padding: 18px 0 0 0;
   }
   .virtual-gain-title {
-    font-size: 1.1rem;
+    padding: 0 10px;
   }
   .virtual-gain-grid {
     grid-template-columns: 1fr;
-    gap: 18px 0;
-    padding: 0 4vw;
+    gap: 18px;
+    padding: 0 10px;
   }
-  .virtual-gain-heading {
-    font-size: 1rem;
+
+  /* Virtual Program Section */
+  .virtual-program-section {
+    padding: 18px 0 0 0;
   }
-  .virtual-gain-desc {
-    font-size: 0.92rem;
+  .virtual-program-container {
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 10px;
+    align-items: stretch;
+  }
+  .virtual-program-details {
+    max-width: 100%;
+    min-width: 0;
+    padding: 0;
+  }
+  .virtual-program-images {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .virtual-program-img-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+  .virtual-program-img-grid img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Virtual Fees Section */
+  .virtual-fees-section {
+    padding: 18px 0 0 0;
+  }
+  .virtual-fees-content {
+    padding: 0 10px;
+  }
+  .virtual-fees-table {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .virtual-fees-labels, .virtual-fees-prices {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .virtual-fees-row {
+    width: 100%;
+  }
+  .virtual-fees-benefits {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+  }
+
+  /* Virtual Who Section */
+  .virtual-who-bg {
+    padding: 10px 0;
+  }
+  .virtual-who-content {
+    padding: 0 10px;
+    max-width: 100%;
+  }
+  .virtual-who-list {
+    padding-left: 0;
+  }
+  .virtual-who-list li {
+    margin-bottom: 8px;
+    padding-left: 0;
+  }
+
+  /* Virtual Testimonial Section */
+  .virtual-testimonial-section {
+    padding: 18px 0 0 0;
+  }
+  .virtual-testimonial-bg {
+    padding: 0 10px;
+  }
+  .virtual-testimonial-grid {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .virtual-testimonial-item {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .virtual-testimonial-quote {
+    padding: 0;
+  }
+  .virtual-testimonial-user {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .virtual-testimonial-divider {
+    display: none;
+  }
+
+  /* Virtual Action Section */
+  .virtual-action-bg {
+    padding: 10px 0;
+  }
+  .virtual-action-content {
+    padding: 0 10px;
+    max-width: 100%;
+  }
+  .virtual-action-list {
+    padding-left: 0;
+  }
+  .virtual-action-list li {
+    margin-bottom: 8px;
+    padding-left: 0;
+  }
+  .virtual-action-desc {
+    padding: 0;
+  }
+
+  /* Virtual Form Section */
+  .virtual-form-section {
+    padding: 18px 0 0 0;
+  }
+  .virtual-form {
+    padding: 0 10px;
+    max-width: 100%;
+  }
+  .virtual-form-group {
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+  }
+  .virtual-form-group label {
+    width: 100%;
+  }
+  .virtual-form input[type="text"],
+  .virtual-form input[type="email"],
+  .virtual-form input[type="tel"],
+  .virtual-form select {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .virtual-form-radio-group {
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .virtual-form-submit {
+    width: 100%;
+    margin-top: 10px;
   }
 }
 
@@ -4174,5 +4338,27 @@ html, body {
   @keyframes slideInRight {
     from { transform: translateX(120%); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
+  }
+}
+
+@media (max-width: 600px) {
+  .virtual-hero-images {
+    display: none !important;
+  }
+  .virtual-hero-images-mobile-nav {
+    display: flex !important;
+  }
+}
+
+.virtual-hero-images-mobile-nav {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .virtual-hero-images {
+    display: none !important;
+  }
+  .virtual-hero-images-mobile-nav {
+    display: flex !important;
   }
 }
