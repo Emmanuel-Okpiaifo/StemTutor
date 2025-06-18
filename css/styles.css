@@ -4131,3 +4131,48 @@ html, body {
     justify-content: center;
   }
 }
+
+@media (max-width: 600px) {
+  .virtual-hero-images-mobile-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 90px;
+    margin-bottom: 10px;
+  }
+  .virtual-hero-images-mobile {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 90px;
+  }
+  .virtual-hero-images-mobile img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 2px 12px 0 rgba(60,72,88,0.10);
+    margin: 0 4px;
+    transition: transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);
+  }
+  .virtual-hero-images-mobile img.slide-out {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  .virtual-hero-images-mobile img.slide-in {
+    transform: translateX(120%);
+    opacity: 0;
+    animation: slideInRight 0.5s forwards;
+  }
+  @keyframes slideInRight {
+    from { transform: translateX(120%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+}
