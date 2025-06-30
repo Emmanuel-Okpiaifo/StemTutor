@@ -4583,29 +4583,37 @@ html, body {
     padding: 0 12px;
   }
   .stem-home-offer-table-wrapper {
-    padding: 4px 0 4px 0;
+    padding: 8px 0 8px 0;
     border-radius: 12px;
-    margin: 0 16px;
-    max-width: calc(100% - 32px);
-    width: calc(100% - 32px);
+    margin: 0 12px;
+    max-width: calc(100% - 24px);
+    width: calc(100% - 24px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .stem-home-offer-table {
-    font-size: 1rem;
+    font-size: 0.95rem;
     width: 100%;
     border-radius: 12px;
     max-width: 100%;
+    margin: 0;
   }
   .stem-home-offer-table thead th {
     font-size: 1rem;
     padding: 12px 0;
+    text-align: center;
   }
   .stem-home-offer-table td {
-    font-size: 0.95rem;
-    padding: 12px 0 12px 20px;
-    line-height: 1.4;
+    font-size: 0.9rem;
+    padding: 12px 16px;
+    line-height: 1.5;
+    text-align: left;
+    word-wrap: break-word;
   }
   .stem-home-offer-table .offer-icon {
-    margin-right: 12px;
+    margin-right: 10px;
+    flex-shrink: 0;
   }
 }
 
