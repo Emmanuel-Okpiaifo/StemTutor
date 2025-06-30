@@ -3085,7 +3085,8 @@ html, body {
 
 .stem-home-hero {
   width: 100%;
-  min-height: 520px;
+  min-height: 500px;
+  height: 70vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -3096,7 +3097,8 @@ html, body {
 }
 .stem-home-hero-bg {
   width: 100%;
-  min-height: 520px;
+  min-height: 500px;
+  height: 70vh;
   background: url('https://stemtutor.com.ng/wp-content/uploads/2025/01/Untitled-design-6.png') center center/cover no-repeat;
   position: relative;
   display: flex;
@@ -3161,10 +3163,11 @@ html, body {
   }
   .stem-home-hero,
   .stem-home-hero-bg {
-    min-height: 320px;
+    min-height: 350px;
+    height: auto;
   }
   .stem-home-hero-content {
-    min-height: 220px;
+    min-height: 200px;
     padding: 0 8px;
   }
   .stem-home-hero-btn {
@@ -3176,7 +3179,8 @@ html, body {
 @media (max-width: 600px) {
   .stem-home-hero,
   .stem-home-hero-bg {
-    min-height: 220px;
+    min-height: 280px;
+    height: auto;
   }
   .stem-home-hero-title {
     font-size: 1.4rem;
