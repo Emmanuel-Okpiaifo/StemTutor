@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-primary);
   line-height: 1.6;
@@ -1596,6 +1600,9 @@ html, body {
     text-align: left;
     padding: 0;
   }
+  .virtual-info-title {
+    text-align: center;
+  }
 
   /* Virtual Gain Section */
   .virtual-gain-section {
@@ -2487,14 +2494,14 @@ html, body {
 
 .virtual-who-section {
   width: 100%;
-  min-height: 70vh;
+  min-height: 50vh;
   position: relative;
   margin: 0;
   padding: 0;
 }
 .virtual-who-bg {
   width: 100%;
-  min-height: 70vh;
+  min-height: 50vh;
   background: url('https://stemtutor.com.ng/wp-content/uploads/2025/04/Untitled-design-6.jpg') center center/cover no-repeat;
   position: relative;
   display: flex;
@@ -2644,14 +2651,14 @@ html, body {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0 0 0.5em 0;
-  padding-top: 18px;
+  padding-top: 8px;
 }
 .virtual-testimonial-bg {
   background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;
   background-color: #f7f9fa;
   background-blend-mode: lighten;
   position: relative;
-  padding: 48px 0 56px 0;
+  padding: 32px 0 56px 0;
 }
 .virtual-testimonial-bg::before {
   content: '';
@@ -2917,7 +2924,8 @@ html, body {
   background: #f7f9fa;
   padding: 48px 0 48px 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .virtual-form {
   max-width: 900px;
@@ -3168,20 +3176,22 @@ html, body {
 @media (max-width: 600px) {
   .stem-home-hero,
   .stem-home-hero-bg {
-    min-height: 180px;
+    min-height: 220px;
   }
   .stem-home-hero-title {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    line-height: 1.3;
+    padding: 0 12px;
   }
   .stem-home-hero-content {
-    min-height: 120px;
-    padding: 0 4px;
+    min-height: 160px;
+    padding: 0 8px;
   }
   .stem-home-hero-btn {
-    font-size: 0.95rem;
-    padding: 8px 14px;
-    border-radius: 20px;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border-radius: 24px;
   }
 }
 
@@ -3290,17 +3300,26 @@ html, body {
   .stem-home-why-row {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 16px;
   }
   .stem-home-why-card {
     min-width: 0;
-    max-width: 98vw;
-    padding: 10px 2vw 8px 2vw;
-    font-size: 0.92rem;
+    max-width: 90vw;
+    padding: 20px 16px 16px 16px;
+    font-size: 0.95rem;
+    border-radius: 12px;
   }
   .stem-home-why-title {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    padding: 0 12px;
+  }
+  .stem-home-why-icon {
+    margin-bottom: 16px;
+  }
+  .stem-home-why-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 }
 
@@ -3395,30 +3414,34 @@ html, body {
 }
 @media (max-width: 600px) {
   .stem-home-offer-section {
-    padding: 18px 0 18px 0;
+    padding: 24px 0 24px 0;
   }
   .stem-home-offer-title {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    padding: 0 12px;
   }
   .stem-home-offer-table-wrapper {
-    padding: 2px 0 2px 0;
-    border-radius: 10px;
+    padding: 4px 0 4px 0;
+    border-radius: 12px;
+    margin: 0 8px;
   }
   .stem-home-offer-table {
-    font-size: 0.98rem;
+    font-size: 1rem;
     width: 100%;
+    border-radius: 12px;
   }
   .stem-home-offer-table thead th {
-    font-size: 0.98rem;
-    padding: 8px 0;
+    font-size: 1rem;
+    padding: 12px 0;
   }
   .stem-home-offer-table td {
     font-size: 0.95rem;
-    padding: 8px 0 8px 18px;
+    padding: 12px 0 12px 20px;
+    line-height: 1.4;
   }
   .stem-home-offer-table .offer-icon {
-    margin-right: 10px;
+    margin-right: 12px;
   }
 }
 
@@ -3516,46 +3539,73 @@ html, body {
 }
 @media (max-width: 1200px) {
   .stem-school-steps-grid {
-    flex-direction: row;
-    gap: 32px;
-    align-items: stretch;
-    flex-wrap: nowrap;
-  }
-  .stem-school-step-card {
-    flex: 1 1 0;
-    min-width: 0;
-    max-width: 400px;
-    width: 100%;
-    padding: 32px 2vw 24px 2vw;
-  }
-}
-@media (max-width: 700px) {
-  .stem-school-steps-title {
-    font-size: 1.3rem;
-    margin-bottom: 18px;
-  }
-  .stem-school-steps-grid {
     flex-direction: column;
     gap: 24px;
     align-items: center;
-    flex-wrap: wrap;
   }
   .stem-school-step-card {
-    max-width: 98vw;
+    max-width: 500px;
     width: 100%;
-    padding: 14px 2vw 10px 2vw;
-    border-radius: 8px;
+    padding: 32px 24px 24px 24px;
+  }
+}
+@media (max-width: 700px) {
+  .stem-school-steps-section {
+    margin: 32px auto 0 auto;
+    padding: 0 4vw;
+  }
+  .stem-school-steps-title {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+  }
+  .stem-school-steps-grid {
+    gap: 20px;
+  }
+  .stem-school-step-card {
+    padding: 24px 16px 20px 16px;
+    border-radius: 12px;
   }
   .stem-school-step-title {
-    font-size: 1rem;
-    margin-bottom: 8px;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
   }
   .stem-school-step-desc {
     font-size: 0.95rem;
+    line-height: 1.5;
   }
   .stem-school-steps-btn {
-    font-size: 0.95rem;
+    font-size: 1rem;
     padding: 12px 24px;
+    border-radius: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .stem-school-steps-section {
+    margin: 24px auto 0 auto;
+    padding: 0 4vw;
+  }
+  .stem-school-steps-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  .stem-school-steps-grid {
+    gap: 16px;
+  }
+  .stem-school-step-card {
+    padding: 20px 12px 16px 12px;
+    border-radius: 8px;
+  }
+  .stem-school-step-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  .stem-school-step-desc {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .stem-school-steps-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
     border-radius: 6px;
   }
 }
@@ -3664,8 +3714,8 @@ html, body {
 .stem-school-hero-section {
   position: relative;
   width: 100%;
-  min-height: 420px;
-  height: 60vh;
+  min-height: 500px;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3737,39 +3787,41 @@ html, body {
 
 @media (max-width: 900px) {
   .stem-school-hero-title {
-    font-size: 2rem;
-    margin-bottom: 18px;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
   }
   .stem-school-hero-section {
-    min-height: 220px;
-    height: 220px;
+    min-height: 350px;
+    height: auto;
   }
   .stem-school-hero-content {
-    min-height: 120px;
-    padding: 0 8px;
+    min-height: 200px;
+    padding: 0 12px;
   }
   .stem-school-hero-btn {
-    font-size: 0.95rem;
-    padding: 8px 14px;
+    font-size: 1rem;
+    padding: 12px 24px;
     border-radius: 6px;
   }
 }
 @media (max-width: 600px) {
   .stem-school-hero-section {
-    min-height: 120px;
-    height: 120px;
+    min-height: 280px;
+    height: auto;
   }
   .stem-school-hero-title {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    line-height: 1.3;
   }
   .stem-school-hero-content {
-    min-height: 80px;
-    padding: 0 4px;
+    min-height: 160px;
+    padding: 0 8px;
   }
   .stem-school-hero-btn {
-    font-size: 0.95rem;
-    padding: 8px 14px;
+    font-size: 0.9rem;
+    padding: 10px 20px;
     border-radius: 6px;
   }
 }
@@ -3838,49 +3890,61 @@ html, body {
 }
 @media (max-width: 900px) {
   .stem-school-why-title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  .stem-school-why-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
   }
   .stem-school-offer-bar {
-    font-size: 0.98rem;
-    padding: 7px 0;
+    font-size: 1rem;
+    padding: 8px 0;
+    margin-bottom: 16px;
   }
   .stem-school-offer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 6px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 8px;
   }
   .stem-school-offer-card {
-    padding: 10px 4px 8px 4px;
+    padding: 16px 8px 12px 8px;
   }
   .stem-school-offer-text {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 }
 @media (max-width: 600px) {
   .stem-school-why-section {
-    padding: 8px 1vw 8px 1vw;
+    padding: 16px 4vw 16px 4vw;
     border-radius: 8px;
+    margin: 16px auto 0 auto;
   }
   .stem-school-why-title {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
   }
   .stem-school-why-subtitle {
-    font-size: 0.92rem;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
   }
   .stem-school-offer-bar {
-    font-size: 0.92rem;
-    padding: 5px 0;
+    font-size: 0.9rem;
+    padding: 6px 0;
     border-radius: 4px;
+    margin-bottom: 12px;
   }
   .stem-school-offer-grid {
     grid-template-columns: 1fr;
-    gap: 6px 0;
+    gap: 8px 0;
   }
   .stem-school-offer-card {
-    padding: 6px 1vw 4px 1vw;
+    padding: 12px 2vw 8px 2vw;
     border-radius: 6px;
   }
   .stem-school-offer-text {
-    font-size: 0.92rem;
+    font-size: 0.85rem;
+    line-height: 1.3;
   }
 }
 
@@ -3985,26 +4049,65 @@ html, body {
 
 @media (max-width: 1200px) {
   .stem-school-plans-grid {
-    flex-direction: row;
-    gap: 32px;
-    align-items: stretch;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
   }
   .stem-school-plan-card {
-    flex: 1 1 0;
+    flex: none;
     min-width: 0;
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
-    padding: 32px 2vw 24px 2vw;
+    padding: 32px 24px 24px 24px;
   }
 }
 @media (max-width: 700px) {
+  .stem-school-plans-section {
+    margin: 32px auto 0 auto;
+  }
   .stem-school-plans-title {
-    font-size: 1.3rem;
-    margin-bottom: 18px;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+  }
+  .stem-school-plans-grid {
+    gap: 20px;
   }
   .stem-school-plan-card {
-    padding: 14px 2vw 10px 2vw;
+    padding: 24px 16px 20px 16px;
+    border-radius: 12px;
+  }
+  .stem-school-plan-name {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  .stem-school-plan-price {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  .stem-school-plan-features {
+    font-size: 1rem;
+  }
+  .stem-school-plan-features li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 600px) {
+  .stem-school-plans-section {
+    margin: 24px auto 0 auto;
+    padding: 0 4vw;
+  }
+  .stem-school-plans-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  .stem-school-plans-grid {
+    gap: 16px;
+  }
+  .stem-school-plan-card {
+    padding: 20px 12px 16px 12px;
     border-radius: 8px;
   }
   .stem-school-plan-name {
@@ -4012,15 +4115,16 @@ html, body {
     margin-bottom: 10px;
   }
   .stem-school-plan-price {
-    font-size: 0.98rem;
+    font-size: 1rem;
     margin-bottom: 10px;
   }
   .stem-school-plan-features {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
   .stem-school-plan-features li {
     margin-bottom: 10px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 }
 
@@ -4240,32 +4344,37 @@ html, body {
 }
 @media (max-width: 700px) {
   .stem-home-steps-title {
-    font-size: 1.3rem;
-    margin-bottom: 18px;
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+    padding: 0 12px;
   }
   .stem-home-steps-grid {
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
     align-items: center;
     flex-wrap: wrap;
+    padding: 0 8px;
   }
   .stem-home-step-card {
-    max-width: 98vw;
+    max-width: 90vw;
     width: 100%;
-    padding: 14px 2vw 10px 2vw;
-    border-radius: 8px;
+    padding: 24px 20px 20px 20px;
+    border-radius: 12px;
   }
   .stem-home-step-title {
-    font-size: 1rem;
-    margin-bottom: 8px;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    line-height: 1.3;
   }
   .stem-home-step-desc {
     font-size: 0.95rem;
+    line-height: 1.5;
   }
   .stem-home-steps-btn {
-    font-size: 0.95rem;
-    padding: 12px 24px;
-    border-radius: 6px;
+    font-size: 1rem;
+    padding: 14px 28px;
+    border-radius: 8px;
+    margin-top: 16px;
   }
 }
 
@@ -4281,6 +4390,49 @@ html, body {
   .cta-section {
     padding: 2rem 0;
     margin-top: 0;
+  }
+  
+  /* Additional stem-home mobile improvements */
+  .stem-home-why-section {
+    padding: 32px 0 24px 0;
+  }
+  
+  .stem-home-offer-section {
+    padding: 32px 0 24px 0;
+  }
+  
+  .stem-home-steps-section {
+    margin: 32px auto 0 auto;
+  }
+  
+  .virtual-form-section {
+    padding: 32px 0 24px 0;
+  }
+  
+  .virtual-form {
+    padding: 0 12px;
+  }
+  
+  .virtual-form-group {
+    margin-bottom: 20px;
+  }
+  
+  .virtual-form-group label {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+  
+  .virtual-form input[type="text"],
+  .virtual-form input[type="email"],
+  .virtual-form input[type="tel"] {
+    font-size: 1rem;
+    padding: 12px 16px;
+  }
+  
+  .virtual-form-submit {
+    font-size: 1rem;
+    padding: 14px 28px;
+    border-radius: 8px;
   }
 }
 
@@ -4414,5 +4566,125 @@ html, body {
   }
   .virtual-hero-images-mobile-nav {
     display: flex !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .stem-home-offer-section {
+    padding: 24px 0 24px 0;
+  }
+  .stem-home-offer-title {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    padding: 0 12px;
+  }
+  .stem-home-offer-table-wrapper {
+    padding: 4px 0 4px 0;
+    border-radius: 12px;
+    margin: 0 16px;
+    max-width: calc(100% - 32px);
+    width: calc(100% - 32px);
+  }
+  .stem-home-offer-table {
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 12px;
+    max-width: 100%;
+  }
+  .stem-home-offer-table thead th {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+  .stem-home-offer-table td {
+    font-size: 0.95rem;
+    padding: 12px 0 12px 20px;
+    line-height: 1.4;
+  }
+  .stem-home-offer-table .offer-icon {
+    margin-right: 12px;
+  }
+}
+
+.virtual-form-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 600px) {
+  .virtual-form-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-nerdz-section {
+    padding: 2.5rem 0 0.5rem;
+  }
+
+  .about-nerdz-logos-wrapper {
+    margin: 1.5rem auto 0;
+  }
+
+  .cta-section {
+    padding: 2rem 0;
+    margin-top: 0;
+  }
+  
+  /* Additional stem-school mobile improvements */
+  .stem-school-why-section {
+    padding: 16px 4vw 16px 4vw;
+  }
+  
+  .stem-school-plans-section {
+    padding: 0 4vw;
+  }
+  
+  .stem-school-steps-section {
+    padding: 0 4vw;
+  }
+  
+  .virtual-form-section {
+    padding: 32px 0 24px 0;
+  }
+  
+  .virtual-form {
+    padding: 0 12px;
+  }
+  
+  .virtual-form-group {
+    margin-bottom: 20px;
+  }
+  
+  .virtual-form-group label {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+  
+  .virtual-form input[type="text"],
+  .virtual-form input[type="email"],
+  .virtual-form input[type="tel"],
+  .virtual-form select {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+    border-radius: 6px;
+  }
+  
+  .virtual-form-radio-group {
+    gap: 16px;
+  }
+  
+  .virtual-form-radio-group label {
+    font-size: 0.9rem;
+  }
+  
+  .virtual-form-submit {
+    font-size: 1rem;
+    padding: 12px 24px;
+    border-radius: 6px;
   }
 }
